@@ -38,3 +38,7 @@ value                          = ydkhqu1w
 time                           = 5889
 
 
+[led]
+enable                         = 1
+
+
