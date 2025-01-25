@@ -31,7 +31,7 @@ name                           = aws
 
 
 [device_code]
-value                          = gpch8vns
+value                          = NULL
 
 
 [total]
