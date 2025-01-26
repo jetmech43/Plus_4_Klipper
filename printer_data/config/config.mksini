@@ -4,7 +4,7 @@ enable                         = 1
 
 
 [target]
-extruder                       = 200
+extruder                       = 250
 heaterbed                      = 60
 hot                            = 55
 
@@ -31,11 +31,11 @@ name                           = aws
 
 
 [device_code]
-value                          = nkmyj0us
+value                          = kqca67zg
 
 
 [total]
-time                           = 8035
+time                           = 8232
 
 
 [led]
