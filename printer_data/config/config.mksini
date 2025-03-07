@@ -31,7 +31,7 @@ name                           = aws
 
 
 [device_code]
-value                          = spnpm33j
+value                          = NULL
 
 
 [total]
