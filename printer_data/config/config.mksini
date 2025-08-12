@@ -23,7 +23,7 @@ enable                         = 0
 
 
 [app_connection]
-method                         = 0
+method                         = 1
 
 
 [app_server]
@@ -31,7 +31,7 @@ name                           = aws
 
 
 [device_code]
-value                          = w6huce9a
+value                          = 3genez5e
 
 
 [total]
@@ -40,5 +40,9 @@ time                           = 15816
 
 [led]
 enable                         = 1
+
+
+[device_state]
+state                          = standby_0.00
 
 
