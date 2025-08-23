@@ -31,7 +31,7 @@ name                           = aws
 
 
 [device_code]
-value                          = 5m2x9xhf
+value                          = NULL
 
 
 [total]
