@@ -4,7 +4,7 @@ enable                         = 1
 
 
 [target]
-extruder                       = 180
+extruder                       = 150
 heaterbed                      = 65
 hot                            = 55
 
