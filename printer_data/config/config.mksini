@@ -35,7 +35,7 @@ value                          = 23nnvmeq
 
 
 [total]
-time                           = 20338
+time                           = 20364
 
 
 [led]
@@ -43,6 +43,6 @@ enable                         = 1
 
 
 [device_state]
-state                          = standby_0.00
+state                          = printing_0.99
 
 
