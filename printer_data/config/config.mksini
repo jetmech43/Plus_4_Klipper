@@ -35,7 +35,7 @@ value                          = c3l80fef
 
 
 [total]
-time                           = 20377
+time                           = 20419
 
 
 [led]
@@ -43,6 +43,6 @@ enable                         = 1
 
 
 [device_state]
-state                          = standby_0.00
+state                          = standby_1.00
 
 
