@@ -43,6 +43,6 @@ enable                         = 1
 
 
 [device_state]
-state                          = standby_0.00
+state                          = paused_0.02
 
 
