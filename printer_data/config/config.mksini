@@ -1,0 +1,48 @@
+
+[fila]
+enable                         = 1
+
+
+[target]
+extruder                       = 300
+heaterbed                      = 65
+hot                            = 45
+
+
+[babystep]
+value                          = 0.000
+adxl_offset                    = 0.15
+
+
+[oobe]
+enable                         = 0
+
+
+[mks_ethernet]
+enable                         = 0
+
+
+[app_connection]
+method                         = 1
+
+
+[app_server]
+name                           = aws
+
+
+[device_code]
+value                          = 23nnvmeq
+
+
+[total]
+time                           = 20364
+
+
+[led]
+enable                         = 1
+
+
+[device_state]
+state                          = standby_0.00
+
+
