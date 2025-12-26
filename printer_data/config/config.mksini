@@ -43,6 +43,6 @@ enable                         = 1
 
 
 [device_state]
-state                          = printing_0.37
+state                          = standby_0.00
 
 
