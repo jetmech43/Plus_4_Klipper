@@ -35,7 +35,7 @@ value                          = l4wzvutb
 
 
 [total]
-time                           = 20472
+time                           = 20567
 
 
 [led]
@@ -43,6 +43,6 @@ enable                         = 1
 
 
 [device_state]
-state                          = standby_0.00
+state                          = standby_1.00
 
 
