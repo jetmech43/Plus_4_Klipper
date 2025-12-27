@@ -35,7 +35,7 @@ value                          = l4wzvutb
 
 
 [total]
-time                           = 20717
+time                           = 20802
 
 
 [led]
@@ -43,6 +43,6 @@ enable                         = 1
 
 
 [device_state]
-state                          = standby_0.00
+state                          = printing_0.99
 
 
