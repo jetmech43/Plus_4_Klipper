@@ -86,9 +86,6 @@ default_type: echo
 #####################################################################
 [include macros.cfg]
 
-# KAMP - adaptive line purge (LINE_PURGE in PRINT_START)
-[include KAMP_Settings.cfg]
-
 
 #####################################################################
 # Input shaping
