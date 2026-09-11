@@ -418,13 +418,7 @@ gcode:
 
     # Home Z
     {% if home_all or 'Z' in rawparams.upper() %}
-        # Randomise the Z probe touch point so repeated homing does not wear a
-        # hole in the build plate coating. Centre is unchanged; only jitter added.
-        {% set z_home_jitter = 10 %}                                                                               ; mm, +/- from centre
-        {% set jitter_x = (range(-z_home_jitter, z_home_jitter + 1) | random) %}
-        {% set jitter_y = (range(-z_home_jitter, z_home_jitter + 1) | random) %}
-        M118 Z home probe jitter: X{jitter_x} Y{jitter_y}
-        G1 X{printer.toolhead.axis_maximum.x / 2 + jitter_x} Y{printer.toolhead.axis_maximum.x / 2 + jitter_y} F12000 
+        G1 X{printer.toolhead.axis_maximum.x / 2} Y{printer.toolhead.axis_maximum.x / 2} F12000 
         G28.1 Z                                                                                                     ; Home Z
         G90                                                                                                         ; Set absolute positioning
         G1 Z{home_all_final_position_z} F600                                                                        ; Move bed down
@@ -1015,12 +1009,3 @@ gcode:
     RESTART                                                                                                     ; Step 4: Restart the firmware to apply the new settings
 
 
-
-
-[gcode_macro _ZHOME_JITTER_TEST]
-description: TEMPORARY - verifies Z home jitter rendering, no motion
-gcode:
-    {% set z_home_jitter = 10 %}
-    {% set jitter_x = (range(-z_home_jitter, z_home_jitter + 1) | random) %}
-    {% set jitter_y = (range(-z_home_jitter, z_home_jitter + 1) | random) %}
-    M118 jitter X{jitter_x} Y{jitter_y} -> nozzle X{printer.toolhead.axis_maximum.x / 2 + jitter_x} Y{printer.toolhead.axis_maximum.x / 2 + jitter_y}
