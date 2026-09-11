@@ -423,7 +423,7 @@ gcode:
         {% set z_home_jitter = 10 %}                                                                               ; mm, +/- from centre
         {% set jitter_x = (range(-z_home_jitter, z_home_jitter + 1) | random) %}
         {% set jitter_y = (range(-z_home_jitter, z_home_jitter + 1) | random) %}
-        G1 X{printer.toolhead.axis_maximum.x / 2 + jitter_x} Y{printer.toolhead.axis_maximum.y / 2 + jitter_y} F12000 
+        G1 X{printer.toolhead.axis_maximum.x / 2 + jitter_x} Y{printer.toolhead.axis_maximum.x / 2 + jitter_y} F12000 
         G28.1 Z                                                                                                     ; Home Z
         G90                                                                                                         ; Set absolute positioning
         G1 Z{home_all_final_position_z} F600                                                                        ; Move bed down
