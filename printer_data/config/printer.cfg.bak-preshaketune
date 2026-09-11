@@ -199,20 +199,6 @@ mesh_pps: 4, 4
 
 
 #####################################################################
-# Axis Twist Compensation
-#####################################################################
-# Nozzle coordinates; Klipper derives probe points as (nozzle - probe offset),
-# i.e. X 30..280 nozzle -> X 5..255 probe with x_offset 25.
-# Values carried over from the pre-FreeDi stock config (same probe offsets).
-# Run CALIBRATE_TWIST heated to populate this - it does nothing until then.
-[axis_twist_compensation]
-speed: 50                # mm/s travel between calibration points
-horizontal_move_z: 10    # mm
-calibrate_start_x: 30    # nozzle X at first calibration point
-calibrate_end_x: 280     # nozzle X at last calibration point
-calibrate_y: 162         # nozzle Y for the calibration line
-
-#####################################################################
 # Probe
 #####################################################################
 #!# Pay attention to this section and compare it with your stock backup config
@@ -320,7 +306,9 @@ event_delay: 3.0
 pause_delay: 0.5
 
 
-[hall_filament_width_sensor]
+# Modified hall_filament_width_sensor.py implementation to only use it as filament detection sensor
+# reason is that measured values are unreliable and it cant really be used as a real [hall_filament_width_sensor]
+[freedi_hall_filament_width_sensor]
 adc1: Toolhead:PA2
 adc2: Toolhead:PA3
 cal_dia1: 1.50
@@ -328,7 +316,7 @@ cal_dia2: 2.0
 raw_dia1: 14206
 raw_dia2: 15278
 default_nominal_filament_diameter: 1.75
-max_difference: 0.5
+max_difference: 0.00
 measurement_delay: 50
 enable: True
 measurement_interval: 3
@@ -340,6 +328,7 @@ runout_gcode:
             M118 Filament run out!
 event_delay: 3.0
 pause_delay: 0.5
+
 
 #####################################################################
 # Fans
@@ -636,11 +625,3 @@ screw3_name: Back right
 screw4: 0,280
 screw4_name: Back left
 
-
-
-#####################################################################
-# Klippain Shake&Tune  (installed 2026-09-09)
-#####################################################################
-# Requires [resonance_tester] + [adxl345], both already configured above.
-# Results land in ~/printer_data/config/ShakeTune_results
-[shaketune]

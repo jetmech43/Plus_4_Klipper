@@ -199,20 +199,6 @@ mesh_pps: 4, 4
 
 
 #####################################################################
-# Axis Twist Compensation
-#####################################################################
-# Nozzle coordinates; Klipper derives probe points as (nozzle - probe offset),
-# i.e. X 30..280 nozzle -> X 5..255 probe with x_offset 25.
-# Values carried over from the pre-FreeDi stock config (same probe offsets).
-# Run CALIBRATE_TWIST heated to populate this - it does nothing until then.
-[axis_twist_compensation]
-speed: 50                # mm/s travel between calibration points
-horizontal_move_z: 10    # mm
-calibrate_start_x: 30    # nozzle X at first calibration point
-calibrate_end_x: 280     # nozzle X at last calibration point
-calibrate_y: 162         # nozzle Y for the calibration line
-
-#####################################################################
 # Probe
 #####################################################################
 #!# Pay attention to this section and compare it with your stock backup config
