@@ -106,7 +106,7 @@ cs_pin: Toolhead:PA4
 spi_software_sclk_pin: Toolhead:PA5
 spi_software_mosi_pin: Toolhead:PA7
 spi_software_miso_pin: Toolhead:PA6
-axes_map: -x, z, y
+axes_map: -x, z, -y
 
 [input_shaper]
 shaper_type_x: mzv
