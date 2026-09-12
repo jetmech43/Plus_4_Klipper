@@ -107,15 +107,6 @@ spi_software_sclk_pin: Toolhead:PA5
 spi_software_mosi_pin: Toolhead:PA7
 spi_software_miso_pin: Toolhead:PA6
 axes_map: -x, z, y
-# 2026-09-12: halved from the 3200 default. The ADXL bulk stream is the only
-# workload that has ever put sustained bulk traffic on these UARTs, and NONE of
-# them have DMA (ttyS2 is a registered kernel console -> "forbid DMA for kernel
-# console"; ttyS0/ttyS1 "failed to request DMA"). That IRQ load produced framing
-# errors -> Klipper retransmits -> a late step -> MCU "Timer too close" shutdown
-# during COMPARE_BELTS_RESPONSES at 134 Hz. 1600 Hz still gives Nyquist 800 Hz,
-# 4x above any shaper test frequency, and ShakeTune derives the rate from the
-# data rather than assuming 3200.
-rate: 1600
 
 [input_shaper]
 shaper_type_x: mzv
