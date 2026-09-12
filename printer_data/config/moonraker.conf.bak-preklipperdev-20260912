@@ -46,12 +46,6 @@ subscriptions:
 channel: stable
 refresh_interval: 168
 
-# Klipper only publishes tags rarely (v0.13.0 is still the newest), so the
-# stable channel reports "up to date" while master is hundreds of commits
-# ahead.  The dev channel tracks the branch tip.  See FreeDi issue #517.
-[update_manager klipper]
-channel: dev
-
 # Mainsail update_manager entry
 [update_manager mainsail]
 type: web
