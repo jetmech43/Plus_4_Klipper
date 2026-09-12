@@ -118,23 +118,10 @@ axes_map: -x, z, y
 rate: 1600
 
 [input_shaper]
-# Measured 2026-09-12 with ShakeTune v6.0.0 (AXES_SHAPER_CALIBRATION).
-# X: ShakeTune offered 2HUMP_EI @ 49.2 Hz (performance) or 3HUMP_EI @ 53.8 Hz
-#    (low vibration). Took PERFORMANCE: the low-vibration option costs more
-#    smoothing, and smoothing rounds corners -- this machine prints functional
-#    engineering parts where dimensional accuracy beats cosmetic ringing, and at
-#    ~11.5 mm3/s it is rarely acceleration-limited anyway.
-#    Cross-check: 49.2 Hz vs 48.8 Hz measured on the old stock stack = 0.8% apart.
-# Y: MZV @ 40 Hz (was 36.6 Hz on the stock stack, ~9% up).
-# NOTE: ShakeTune does NOT write this section -- it only reports. And
-# SET_INPUT_SHAPER does not persist via SAVE_CONFIG (only SHAPER_CALIBRATE does),
-# so these values must live here by hand.
-shaper_type_x: 2hump_ei
-shaper_freq_x: 49.2
-damping_ratio_x: 0.161
+shaper_type_x: mzv
+shaper_freq_x: 57.6
 shaper_type_y: mzv
-shaper_freq_y: 40
-damping_ratio_y: 0.070
+shaper_freq_y: 46.6
 
 
 #####################################################################
