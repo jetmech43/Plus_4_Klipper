@@ -22,7 +22,7 @@ variable_detach_macro: "Dock_Probe"
 
 # Line purge - values carried over from the working stock QIDI config
 variable_purge_height: 0.8                  # Z height of nozzle during purge
-variable_tip_distance: 0.8                  # filament tip to nozzle before purge; PRIME_NOZZLE ends G1 E-0.8 and neither wipe extrudes, so the tip sits 0.8 back when LINE_PURGE starts
+variable_tip_distance: 0                    # filament tip to nozzle before purge
 variable_purge_margin: 20                   # distance in front of the print area
 variable_purge_amount: 30                   # mm of filament purged
 variable_flow_rate: 4                       # mm3/s
