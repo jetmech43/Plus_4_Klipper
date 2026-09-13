@@ -416,7 +416,7 @@ kick_start_time: 0.5
 heater: chamber
 fan_speed: 1.0
 off_below: 0
-heater_temp: 75   # was 40 — only run when chamber is COMMANDED to heat; 75 = [heater_generic chamber] max_temp, so the temp branch is a runaway-safety trigger only
+heater_temp: 40 
 
 ## Cold end and toolhead housing fans
 [heater_fan hotend_fan]

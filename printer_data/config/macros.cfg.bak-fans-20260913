@@ -533,13 +533,6 @@ gcode:
     M109 S{hotend_target_temp}                                                                                     ; Set and wait for hotend temperature 
     LINE_PURGE                                                                                                     ; KAMP adaptive purge line beside the print
 
-    # Air filtration ON for the duration of the print. Guarded: when the chamber IS
-    # being heated, CHAMBER_TEMP_CONTROLLER owns filterfan as the chamber EXHAUST and
-    # forcing it on here would fight the chamber heater. PRINT_END turns it off (M106 P3 S0).
-    {% if chamber_target_temp == 0 %}
-        M106 P3 S255
-    {% endif %}
-
 
 [gcode_macro PRINT_END]
 gcode:
