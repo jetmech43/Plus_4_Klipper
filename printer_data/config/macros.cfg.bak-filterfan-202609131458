@@ -536,7 +536,6 @@ gcode:
     # Air filtration ON for the duration of the print. Guarded: when the chamber IS
     # being heated, CHAMBER_TEMP_CONTROLLER owns filterfan as the chamber EXHAUST and
     # forcing it on here would fight the chamber heater. PRINT_END turns it off (M106 P3 S0).
-    UPDATE_DELAYED_GCODE ID=FILTER_FAN_OFF DURATION=0      ; cancel a pending post-print timer
     {% if chamber_target_temp == 0 %}
         M106 P3 S255
     {% endif %}
@@ -557,8 +556,7 @@ gcode:
 
     M106 P0 S0                                                                                                      ; Turn off part cooling fan
     M106 P2 S0                                                                                                      ; Turn off side fan
-    M106 P3 S255                                                                                                    ; Keep filtering: clears VOCs and cools the chamber
-    UPDATE_DELAYED_GCODE ID=FILTER_FAN_OFF DURATION=600                                                             ; ...then off after 10 min
+    M106 P3 S0                                                                                                      ; Turn off activated charcoal fan
 
     M104 S0                                                                                                         ; Turn off hotend
     M140 S0                                                                                                         ; Turn off heated bed
@@ -1064,11 +1062,3 @@ gcode:
     M118 Starting twist compensation calibration...
     AXIS_TWIST_COMPENSATION_CALIBRATE
     M118 Done! Run SAVE_CONFIG to save.
-
-
-# Post-print air filtration timer. Started by PRINT_END (which CANCEL_PRINT also calls),
-# cancelled by PRINT_START so it can never fire during a following print.
-# Change DURATION in PRINT_END to adjust the run time (600 = 10 min).
-[delayed_gcode FILTER_FAN_OFF]
-gcode:
-    SET_FAN_SPEED FAN=filterfan SPEED=0
