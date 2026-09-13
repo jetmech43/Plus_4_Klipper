@@ -88,7 +88,6 @@ default_type: echo
 
 # KAMP - adaptive line purge (LINE_PURGE in PRINT_START)
 [include KAMP_Settings.cfg]
-[include timelapse.cfg]
 
 
 #####################################################################

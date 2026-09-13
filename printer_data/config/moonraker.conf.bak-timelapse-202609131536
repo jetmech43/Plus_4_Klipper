@@ -108,15 +108,3 @@ path: ~/klipper-backup
 origin: https://github.com/Staubgeborener/klipper-backup.git
 managed_services: moonraker
 primary_branch: main
-
-# ############################################################################
-# moonraker-timelapse. NOTE: FreeDi's install.sh force-overwrites moonraker.conf
-# (install.sh:766-772 copies config_section/generic/. over printer_data/config),
-# so THIS SECTION IS LOST on a manual FreeDi reinstall/wizard run. Re-add it, or
-# timelapse silently stops recording with no error.
-# Checked by ~/3Dprinting/Qidi/Plus4/verify-freedi-config.sh
-# ############################################################################
-[timelapse]
-output_path: ~/printer_data/timelapse/
-frame_path: /tmp/timelapse/printer
-snapshoturl: http://127.0.0.1:8080/?action=snapshot
