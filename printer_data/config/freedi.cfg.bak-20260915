@@ -35,7 +35,7 @@ default_speed_sidefan: 100
 default_speed_filterfan: 100
 
 # Synchronize case light with display: True | False
-sync_case_light_with_display: False
+sync_case_light_with_display: True
 # Default brightness of the display in %
 default_brightness: 100
 # Dim display: time in minutes | 0 to disable

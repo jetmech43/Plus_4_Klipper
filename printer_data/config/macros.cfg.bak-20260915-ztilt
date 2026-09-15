@@ -510,7 +510,6 @@ gcode:
     M190 S{bed_target_temp}                                                                                        ; Set and wait for bed temperature 
     G90                                                                                                            ; Set absolute positioning
     G1 X{start_position_x} Y{start_position_y} Z{start_position_z} F7800                                           ; Move to start position
-    Z_TILT_ADJUST                                                                                                  ; Level the gantry at temp BEFORE the mesh (nothing else on FreeDi runs this)
     G28 Z                                                                                                          ; Home Z again for to compensate bed expansion  
     
     {% if KAMP_deactivated %}
