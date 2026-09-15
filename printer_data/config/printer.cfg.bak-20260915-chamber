@@ -323,7 +323,7 @@ max_temp: 75
 
 [verify_heater chamber]
 max_error: 400
-check_gain_time: 1200
+check_gain_time: 600
 hysteresis: 5
 heating_gain: 2
 
