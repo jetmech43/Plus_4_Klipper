@@ -200,8 +200,8 @@ max_power: 1.0
 #pid_kd: 1859.554
 min_temp: -50
 max_temp: 125
-#pwm_cycle_time: 0.02 # for 50Hz line power
-pwm_cycle_time: 0.01667 # for 60Hz line power (US 110V/60Hz - exact 1/60; FreeDi shipped 50Hz active)
+pwm_cycle_time: 0.02 # for 50Hz line power 
+#pwm_cycle_time: 0.016 # for 60Hz line power
 
 [verify_heater heater_bed]
 max_error: 200
