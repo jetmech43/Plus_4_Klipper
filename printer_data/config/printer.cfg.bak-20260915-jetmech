@@ -308,7 +308,7 @@ heater_pin: PC8
 #set max_power to 0.7 for 220V
 #set max_power to 1.0 if you are using a quality aftermarket SSR with a heat sink
 max_power: 0.6                #!# Pay attention to this value and compare it with your stock backup config and with caution (read the comments)
-pwm_cycle_time: 0.02088            # jetmech43 tested value for aftermarket SSR, 60Hz/120VAC (47.9Hz)
+pwm_cycle_time: 0.01667       #!# 1/60Hz line-sync for the Omron SSR - stops shop-light flicker (was in stock 1.7.x, dropped by 1.8.2)
 #sensor_type: NTC 100K MGB18-104F39050L32
 #sensor_pin: PA1
 sensor_type: temperature_combined
@@ -316,9 +316,9 @@ sensor_list: temperature_sensor Toolhead_STM32F103XE, temperature_sensor Toolhea
 combination_method: mean
 maximum_deviation: 70
 control: pid
-pid_Kp: 45
-pid_Ki: 0.1
-pid_Kd: 5000
+pid_Kp: 63.418 
+pid_Ki: 1.342 
+pid_Kd: 749.125
 min_temp: -100
 max_temp: 75
 
