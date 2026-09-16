@@ -307,8 +307,7 @@ heater_pin: PC8
 #set max_power to 0.4 for 110V
 #set max_power to 0.7 for 220V
 #set max_power to 1.0 if you are using a quality aftermarket SSR with a heat sink
-max_power: 0.6                #!# Pay attention to this value and compare it with your stock backup config and with caution (read the comments)
-pwm_cycle_time: 0.01667       #!# 1/60Hz line-sync for the Omron SSR - stops shop-light flicker (was in stock 1.7.x, dropped by 1.8.2)
+max_power: 0.4                #!# Pay attention to this value and compare it with your stock backup config and with caution (read the comments)
 #sensor_type: NTC 100K MGB18-104F39050L32
 #sensor_pin: PA1
 sensor_type: temperature_combined
